@@ -65,6 +65,14 @@
   transition: all var(--transition-normal);
 }
 
+.home-carousel .swiper-button-next {
+  right: 16px;
+}
+
+.home-carousel .swiper-button-prev {
+  left: 16px;
+}
+
 .home-carousel .swiper-button-next:hover,
 .home-carousel .swiper-button-prev:hover {
   background-color: var(--primary-green);
@@ -72,7 +80,7 @@
 
 .home-carousel .swiper-button-next::after,
 .home-carousel .swiper-button-prev::after {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .home-carousel .swiper-pagination-bullet {
@@ -109,9 +117,17 @@
     height: 40px;
   }
 
+  .home-carousel .swiper-button-next {
+    right: 12px;
+  }
+
+  .home-carousel .swiper-button-prev {
+    left: 12px;
+  }
+
   .home-carousel .swiper-button-next::after,
   .home-carousel .swiper-button-prev::after {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -135,8 +151,16 @@
     height: 35px;
   }
 
+  .home-carousel .swiper-button-next {
+    right: 12px;
+  }
+
+  .home-carousel .swiper-button-prev {
+    left: 12px;
+  }
+
   .home-carousel .swiper-button-next::after,
   .home-carousel .swiper-button-prev::after {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
   }
 }
