@@ -32,7 +32,7 @@ export const sendEmail = async (formData) => {
       // Em desenvolvimento, simular sucesso
       return {
         success: true,
-        message: 'Modo de demonstração: EmailJS precisa ser configurado para envio real'
+        message: 'Mensagem enviada com sucesso! (Simulado em desenvolvimento)'
       }
     }
 
