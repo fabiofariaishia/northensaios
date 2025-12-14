@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp } from 'react-icons/fa'
-import { contactInfo } from '../../data/contactInfo'
+import { contactInfo, whatsappMessage } from '../../data/contactInfo'
 import { MENU_ITEMS, COMPANY_NAME } from '../../utils/constants'
 import './Footer.css'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
+  const ishiaWhatsappLink = `https://wa.me/5533998535883?text=${encodeURIComponent(whatsappMessage)}`
 
   return (
     <footer className="footer">
@@ -69,7 +70,12 @@ function Footer() {
         <div className="footer-bottom">
           <p>&copy; {currentYear} {contactInfo.company}. Todos os direitos reservados.</p>
           <p>CNPJ: {contactInfo.cnpj}</p>
-          <p>Desenvolvido com dedicação para excelência em ensaios elétricos.</p>
+          <p>
+            Desenvolvido com dedicação para excelência em ensaios elétricos pela{' '}
+            <a href={ishiaWhatsappLink} target="_blank" rel="noopener noreferrer">
+              <strong>Ishia Tecnologia</strong>
+            </a>.
+          </p>
         </div>
       </div>
     </footer>
