@@ -24,7 +24,8 @@ export const contactInfo = {
   },
   maps: {
     embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.892!2d-43.863!3d-16.734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQ0JzAyLjQiUyA0M8KwNTEnNDYuOCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890!5m2!1spt-BR!2sbr',
-    link: 'https://maps.google.com/?q=R.+Antônio+Ferreira+Oliveira+90A+Montes+Claros+MG'
+    link: 'https://maps.google.com/?q=R.+Antônio+Ferreira+Oliveira+90A+Montes+Claros+MG',
+    directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=R.+Antônio+Ferreira+Oliveira+90A+Monte+Carmelo+Montes+Claros+MG+39402-506'
   }
 }
 
