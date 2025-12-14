@@ -3,16 +3,35 @@ import PageHeader from '../components/common/PageHeader'
 import Section from '../components/common/Section'
 import ServiceCategory from '../components/services/ServiceCategory'
 import NormsCompliance from '../components/services/NormsCompliance'
+import { FaUserCheck, FaCertificate, FaClock } from 'react-icons/fa'
 import { servicesByCategory } from '../data/services'
 import { SERVICE_CATEGORIES } from '../utils/constants'
 
 function Services() {
+  const reportHighlights = [
+    {
+      icon: <FaUserCheck />,
+      title: 'Dupla assinatura digital',
+      description: 'Cada laudo é assinado pelo engenheiro responsável e pelo técnico executor no padrão ICP-Brasil.'
+    },
+    {
+      icon: <FaCertificate />,
+      title: 'ICP-Brasil',
+      description: 'Assinaturas digitais com validade jurídica e rastreabilidade; os ensaios seguem NR10 e ABNT.'
+    },
+    {
+      icon: <FaClock />,
+      title: 'Entrega imediata 24/7',
+      description: 'Assim que concluímos os ensaios, os laudos ficam liberados para download.'
+    }
+  ]
+
   return (
     <>
       <SEO
         title="Serviços"
         description="Ensaios elétricos em EPIs, calibração de equipamentos e manutenção. Certificação NR10, ABNT e rastreabilidade RBC/INMETRO."
-        keywords="ensaios elétricos, calibração, luvas isolantes, capacetes, alicates, terrômetros, NR10, ABNT"
+        keywords="ensaios elétricos, calibração, luvas isolantes, capacetes, alicates, termômetros, NR10, ABNT"
         canonical="/servicos"
       />
 
@@ -57,6 +76,40 @@ function Services() {
         background="white"
       >
         <NormsCompliance />
+      </Section>
+
+      {/* Assinaturas digitais e disponibilidade */}
+      <Section background="light">
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gap: 'var(--spacing-lg)'
+          }}
+        >
+          {reportHighlights.map((item, index) => (
+            <div
+              key={index}
+              style={{
+                background: '#fff',
+                border: `1px solid var(--border-color)`,
+                borderRadius: 'var(--border-radius)',
+                padding: 'var(--spacing-lg)',
+                boxShadow: 'var(--shadow-sm)',
+                display: 'grid',
+                gap: 'var(--spacing-sm)'
+              }}
+            >
+              <div style={{ color: 'var(--primary-green)', fontSize: '1.5rem' }}>
+                {item.icon}
+              </div>
+              <h3 style={{ margin: 0 }}>{item.title}</h3>
+              <p style={{ margin: 0, color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </Section>
 
       {/* CTA */}

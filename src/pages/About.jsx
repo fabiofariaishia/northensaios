@@ -11,22 +11,22 @@ function About() {
     {
       icon: <FaBullseye />,
       title: 'Segurança',
-      description: 'Compromisso absoluto com a segurança de pessoas e equipamentos'
+      description: 'Compromisso absoluto com a segurança de pessoas e equipamentos.'
     },
     {
       icon: <FaEye />,
       title: 'Qualidade',
-      description: 'Excelência técnica em cada ensaio e calibração realizada'
+      description: 'Excelência técnica em cada ensaio e calibração realizada.'
     },
     {
       icon: <FaHeart />,
       title: 'Ética',
-      description: 'Transparência e integridade em todas as nossas relações'
+      description: 'Transparência e integridade em todas as nossas relações.'
     },
     {
       icon: <FaBullseye />,
       title: 'Inovação',
-      description: 'Busca constante por melhorias e atualizações tecnológicas'
+      description: 'Busca constante por melhorias e atualizações tecnológicas.'
     }
   ]
 
@@ -130,6 +130,7 @@ function About() {
           </p>
         </div>
       </Section>
+
     </>
   )
 }

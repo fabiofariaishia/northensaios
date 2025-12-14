@@ -317,3 +317,5 @@ npm run analyze      # Analisar tamanho do bundle
 **Última atualização:** 2025-12-14
 **Versão do plano:** 1.0
 **Status:** Em planejamento
+## Instruções adicionais
+- Usar codificação UTF-8 padrão ao ler e editar arquivos, mantendo acentuação e caracteres especiais quando fizer sentido no conteúdo.

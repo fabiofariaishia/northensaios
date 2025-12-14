@@ -4,8 +4,27 @@ import Section from '../components/common/Section'
 import ServicesPreview from '../components/home/ServicesPreview'
 import AboutPreview from '../components/home/AboutPreview'
 import WhyChooseUs from '../components/home/WhyChooseUs'
+import { FaUserCheck, FaCertificate, FaClock } from 'react-icons/fa'
 
 function Home() {
+  const reportHighlights = [
+    {
+      icon: <FaUserCheck />,
+      title: 'Dupla assinatura digital',
+      description: 'Laudos assinados pelo engenheiro responsável e pelo técnico executor, certificados no padrão ICP-Brasil.'
+    },
+    {
+      icon: <FaCertificate />,
+      title: 'Validade jurídica',
+      description: 'Documentos com assinatura ICP-Brasil; nossos ensaios seguem NR10 e ABNT para conformidade técnica.'
+    },
+    {
+      icon: <FaClock />,
+      title: 'Disponíveis 24/7',
+      description: 'Liberamos os laudos assim que os equipamentos são verificados; acesso on-line a qualquer hora.'
+    }
+  ]
+
   return (
     <>
       <SEO
@@ -27,10 +46,45 @@ function Home() {
         <ServicesPreview />
       </Section>
 
-      {/* Sobre Preview */}
       <Section
+        title="Laudos com assinatura digital dupla"
+        subtitle="Segurança jurídica e acesso imediato aos documentos"
         background="light"
       >
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gap: 'var(--spacing-lg)'
+          }}
+        >
+          {reportHighlights.map((item, index) => (
+            <div
+              key={index}
+              style={{
+                background: '#fff',
+                border: `1px solid var(--border-color)`,
+                borderRadius: 'var(--border-radius)',
+                padding: 'var(--spacing-lg)',
+                boxShadow: 'var(--shadow-sm)',
+                display: 'grid',
+                gap: 'var(--spacing-sm)'
+              }}
+            >
+              <div style={{ color: 'var(--primary-green)', fontSize: '1.5rem' }}>
+                {item.icon}
+              </div>
+              <h3 style={{ margin: 0 }}>{item.title}</h3>
+              <p style={{ margin: 0, color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Sobre Preview */}
+      <Section background="light">
         <AboutPreview />
       </Section>
 

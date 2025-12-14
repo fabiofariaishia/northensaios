@@ -2,8 +2,7 @@ import SEO from '../components/shared/SEO'
 import PageHeader from '../components/common/PageHeader'
 import Section from '../components/common/Section'
 import CertificationsBadges from '../components/lab/CertificationsBadges'
-import { FaTruck, FaClock, FaMapMarkedAlt, FaCheckCircle, FaFileAlt } from 'react-icons/fa'
-import Card from '../components/common/Card'
+import { FaTruck, FaClock, FaCheckCircle, FaFileAlt } from 'react-icons/fa'
 import Button from '../components/common/Button'
 import { Link } from 'react-router-dom'
 import './MobileLab.css'
@@ -13,27 +12,27 @@ function MobileLab() {
     {
       icon: <FaCheckCircle />,
       title: '1. Agendamento',
-      description: 'Entre em contato e agende a visita do laboratório móvel'
+      description: 'Entre em contato e agende a visita do laboratório móvel.'
     },
     {
       icon: <FaTruck />,
       title: '2. Deslocamento',
-      description: 'Nossa equipe se desloca até sua empresa com todos os equipamentos'
+      description: 'Nossa equipe se desloca até sua empresa com todos os equipamentos.'
     },
     {
       icon: <FaFileAlt />,
       title: '3. Ensaios/Calibrações',
-      description: 'Realizamos os serviços in loco com a mesma qualidade do laboratório fixo'
+      description: 'Realizamos os serviços in loco com a mesma qualidade do laboratório fixo.'
     },
     {
       icon: <FaCheckCircle />,
       title: '4. Relatórios',
-      description: 'Entregamos laudos técnicos certificados imediatamente'
+      description: 'Entregamos laudos técnicos certificados imediatamente.'
     },
     {
       icon: <FaClock />,
       title: '5. Orientações',
-      description: 'Fornecemos orientações técnicas e suporte pós-serviço'
+      description: 'Fornecemos orientações técnicas e suporte pós-serviço.'
     }
   ]
 
