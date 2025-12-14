@@ -1,0 +1,4 @@
+.card-hoverable:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}

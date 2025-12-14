@@ -1,0 +1,1 @@
+D:/projetos/sites/northensaios/CLAUDE.md

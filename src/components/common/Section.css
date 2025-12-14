@@ -1,0 +1,31 @@
+.section-white {
+  background-color: var(--bg-primary);
+}
+
+.section-light {
+  background-color: var(--bg-secondary);
+}
+
+.section-green {
+  background-color: var(--bg-green);
+  color: var(--text-white);
+}
+
+.section-green .section-title h2,
+.section-green .section-title p {
+  color: var(--text-white);
+}
+
+.section-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+}
+
+.section-dark .section-title h2,
+.section-dark .section-title p {
+  color: var(--text-white);
+}
+
+.section-content {
+  margin-top: var(--spacing-md);
+}

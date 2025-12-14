@@ -1,0 +1,24 @@
+{
+  "name": "northensaios",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "description": "Site institucional North Ensaios - Ensaios Elétricos e Calibração",
+  "author": "North Ensaios",
+  "license": "MIT",
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@vitejs/plugin-react": "^5.1.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.10.1",
+    "swiper": "^12.0.3",
+    "vite": "^7.2.7"
+  }
+}
