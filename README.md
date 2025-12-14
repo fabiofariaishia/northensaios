@@ -207,16 +207,22 @@ netlify deploy --prod
 - **Output Directory**: `dist`
 - **Node Version**: 22.x
 
-## Dados Temporários (Substituir)
+## Dados da Empresa
 
-Os seguintes dados são fictícios e devem ser substituídos:
+**Informações atualizadas com base no CNPJ:**
 
-- Endereço: Rua Exemplo, 123, Belo Horizonte - MG
-- Telefone: (31) 3333-4444
-- WhatsApp: (31) 99999-8888
-- Email: contato@northensaios.com.br
-- Horário: Seg-Sex 07:30 às 17:30
-- Imagens: Placeholders do placehold.co
+- **Razão Social:** FMS North Ensaios Ltda
+- **CNPJ:** 49.285.584/0001-88
+- **Endereço:** R. Antônio Ferreira Oliveira, 90A - Sala 01, Monte Carmelo, Montes Claros - MG, CEP 39.402-506
+- **Telefone:** (38) 9857-7740
+- **WhatsApp:** (38) 98577-7740
+- **Email:** fmsnorthensaios@gmail.com
+- **Horário:** Segunda a Sexta: 07:30 às 17:30
+
+**Ainda precisam ser atualizados:**
+- Imagens: Substituir placeholders por fotos reais
+- EmailJS: Configurar credenciais em `src/utils/constants.js`
+- Google Maps: Verificar coordenadas exatas do endereço
 
 ## Estrutura de Páginas
 

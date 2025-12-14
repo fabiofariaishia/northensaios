@@ -1,4 +1,4 @@
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp, FaBuilding } from 'react-icons/fa'
 import { contactInfo } from '../../data/contactInfo'
 import Card from '../common/Card'
 import './ContactInfo.css'
@@ -34,6 +34,12 @@ function ContactInfo() {
         <FaMapMarkerAlt className="contact-info-icon" />
         <h3>Endereço</h3>
         <p>{contactInfo.address.full}</p>
+      </Card>
+
+      <Card className="contact-info-card" hoverable={false}>
+        <FaBuilding className="contact-info-icon" />
+        <h3>CNPJ</h3>
+        <p>{contactInfo.cnpj}</p>
       </Card>
 
       <Card className="contact-info-card" hoverable={false}>

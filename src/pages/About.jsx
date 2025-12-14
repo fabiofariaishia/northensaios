@@ -34,7 +34,7 @@ function About() {
     <>
       <SEO
         title="Sobre Nós"
-        description="Conheça a North Ensaios: mais de 20 anos de experiência em ensaios elétricos e calibração. Missão, visão, valores e certificações."
+        description="Conheça a North Ensaios: especializada em ensaios elétricos e calibração. Missão, visão, valores e certificações."
         keywords="sobre north ensaios, história, missão, visão, valores, certificações, CREA, NR10"
         canonical="/sobre"
       />
@@ -47,30 +47,29 @@ function About() {
       {/* História */}
       <Section
         title="Nossa História"
-        subtitle="Mais de duas décadas garantindo segurança e conformidade"
+        subtitle="Garantindo segurança e conformidade"
         background="white"
       >
         <div className="about-content">
           <div className="about-text">
             <p>
-              Fundada há mais de 20 anos, a North Ensaios nasceu com o propósito de oferecer
-              serviços especializados em ensaios elétricos e calibração de equipamentos de alta
-              qualidade e confiabilidade.
+              A North Ensaios nasceu com o propósito de oferecer serviços especializados em
+              ensaios elétricos e calibração de equipamentos de alta qualidade e confiabilidade.
             </p>
             <p>
-              Ao longo dos anos, construímos uma sólida reputação no mercado, baseada em nossa
-              competência técnica, ética profissional e compromisso com a segurança. Nossa equipe
-              é formada por profissionais altamente qualificados e em constante atualização.
+              Construímos uma sólida reputação no mercado, baseada em nossa competência técnica,
+              ética profissional e compromisso com a segurança. Nossa equipe é formada por
+              profissionais altamente qualificados e em constante atualização.
             </p>
             <p>
-              Hoje, somos referência nacional em ensaios elétricos, atendendo empresas de diversos
+              Hoje, somos referência em ensaios elétricos, atendendo empresas de diversos
               setores com nosso laboratório móvel e instalações fixas, sempre com a mesma dedicação
-              e excelência que nos trouxe até aqui.
+              e excelência.
             </p>
           </div>
           <div className="about-image">
             <img
-              src="https://placehold.co/600x400/006B3F/FFFFFF?text=20+Anos+de+Experiencia"
+              src="https://placehold.co/600x400/006B3F/FFFFFF?text=North+Ensaios"
               alt="North Ensaios - História"
               loading="lazy"
             />

@@ -132,8 +132,8 @@ function MobileLab() {
           <p>
             Nosso laboratório móvel possui as mesmas certificações e credenciais do laboratório
             fixo: registro CREA, credenciamento equivalente às concessionárias, conformidade NR10
-            e ABNT, e rastreabilidade RBC/INMETRO. Mais de 20 anos de experiência garantem a
-            excelência técnica de cada serviço realizado.
+            e ABNT, e rastreabilidade RBC/INMETRO. Nossa competência técnica garante a
+            excelência de cada serviço realizado.
           </p>
         </div>
       </Section>

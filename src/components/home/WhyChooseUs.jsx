@@ -10,8 +10,8 @@ const reasons = [
   },
   {
     icon: <FaTrophy />,
-    title: '20+ Anos de Experiência',
-    description: 'Mais de duas décadas garantindo segurança e conformidade no setor elétrico'
+    title: 'Excelência Técnica',
+    description: 'Garantindo segurança e conformidade no setor elétrico com profissionais qualificados'
   },
   {
     icon: <FaTruck />,

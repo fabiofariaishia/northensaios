@@ -7,11 +7,11 @@ function AboutPreview() {
     <div className="about-preview">
       <div className="about-preview-content">
         <div className="about-preview-text">
-          <h2>Mais de 20 anos de experiência em ensaios elétricos</h2>
+          <h2>Especialistas em ensaios elétricos</h2>
           <p>
             A North Ensaios é especializada em ensaios elétricos e calibração de equipamentos,
-            oferecendo serviços de alta qualidade com certificação NR10 e ABNT. Nossa experiência
-            de mais de duas décadas garante segurança e conformidade para sua empresa.
+            oferecendo serviços de alta qualidade com certificação NR10 e ABNT. Nossa competência
+            técnica garante segurança e conformidade para sua empresa.
           </p>
           <p>
             Com laboratório móvel próprio, atendemos todo o território nacional, levando

@@ -11,7 +11,7 @@ function Home() {
       <SEO
         title="Home"
         description="North Ensaios - Ensaios elétricos, calibração de equipamentos e laboratório móvel. Certificação NR10 e ABNT com mais de 20 anos de experiência."
-        keywords="ensaios elétricos, calibração, laboratório móvel, NR10, ABNT, EPIs, Belo Horizonte"
+        keywords="ensaios elétricos, calibração, laboratório móvel, NR10, ABNT, EPIs, Montes Claros, Norte de Minas"
         canonical="/"
       />
 

@@ -16,7 +16,7 @@ function Footer() {
             <h3>{COMPANY_NAME}</h3>
             <p>
               Ensaios elétricos, calibração de equipamentos e laboratório móvel.
-              Certificação NR10 e ABNT com mais de 20 anos de experiência.
+              Certificação NR10 e ABNT.
             </p>
           </div>
 
@@ -67,7 +67,8 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} {COMPANY_NAME}. Todos os direitos reservados.</p>
+          <p>&copy; {currentYear} {contactInfo.company}. Todos os direitos reservados.</p>
+          <p>CNPJ: {contactInfo.cnpj}</p>
           <p>Desenvolvido com dedicação para excelência em ensaios elétricos.</p>
         </div>
       </div>

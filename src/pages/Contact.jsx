@@ -11,7 +11,7 @@ function Contact() {
       <SEO
         title="Contato"
         description="Entre em contato com a North Ensaios. Telefone, WhatsApp, email e formulário de contato. Atendemos em todo Brasil."
-        keywords="contato, orçamento, telefone, email, whatsapp, Belo Horizonte"
+        keywords="contato, orçamento, telefone, email, whatsapp, Montes Claros, Norte de Minas"
         canonical="/contato"
       />
 
