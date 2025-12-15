@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { useEffect } from 'react'
 
 function SEO({
   title,
@@ -15,39 +15,74 @@ function SEO({
   const siteUrl = 'https://northensaios.com.br' // Atualizar com URL real
   const fullTitle = title ? `${title} - North Ensaios` : defaultTitle
 
-  return (
-    <Helmet>
-      {/* Título */}
-      <title>{fullTitle}</title>
+  useEffect(() => {
+    const upsertMeta = (attr, key, value) => {
+      if (!value) return
+      const selector = `meta[${attr}="${key}"]`
+      let element = document.head.querySelector(selector)
+      if (!element) {
+        element = document.createElement('meta')
+        element.setAttribute(attr, key)
+        document.head.appendChild(element)
+      }
+      element.setAttribute('content', value)
+    }
 
-      {/* Meta Tags Básicas */}
-      <meta name="description" content={description || defaultDescription} />
-      <meta name="keywords" content={keywords || defaultKeywords} />
+    const removeMeta = (attr, key) => {
+      const selector = `meta[${attr}="${key}"]`
+      const element = document.head.querySelector(selector)
+      if (element) {
+        element.remove()
+      }
+    }
 
-      {/* Canonical */}
-      {canonical && <link rel="canonical" href={`${siteUrl}${canonical}`} />}
+    const upsertLink = (relValue, hrefValue) => {
+      if (!hrefValue) return
+      const selector = `link[rel="${relValue}"]`
+      let element = document.head.querySelector(selector)
+      if (!element) {
+        element = document.createElement('link')
+        element.setAttribute('rel', relValue)
+        document.head.appendChild(element)
+      }
+      element.setAttribute('href', hrefValue)
+    }
 
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description || defaultDescription} />
-      <meta property="og:type" content={ogType} />
-      {ogImage && <meta property="og:image" content={ogImage} />}
-      <meta property="og:url" content={`${siteUrl}${canonical || ''}`} />
-      <meta property="og:site_name" content="North Ensaios" />
+    document.title = fullTitle
 
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description || defaultDescription} />
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
+    upsertMeta('name', 'description', description || defaultDescription)
+    upsertMeta('name', 'keywords', keywords || defaultKeywords)
 
-      {/* Outras */}
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="Portuguese" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="author" content="North Ensaios" />
-    </Helmet>
-  )
+    const canonicalUrl = canonical ? `${siteUrl}${canonical}` : `${siteUrl}${window.location.pathname}`
+    upsertLink('canonical', canonicalUrl)
+
+    upsertMeta('property', 'og:title', fullTitle)
+    upsertMeta('property', 'og:description', description || defaultDescription)
+    upsertMeta('property', 'og:type', ogType)
+    upsertMeta('property', 'og:url', canonicalUrl)
+    upsertMeta('property', 'og:site_name', 'North Ensaios')
+    if (ogImage) {
+      upsertMeta('property', 'og:image', ogImage)
+    } else {
+      removeMeta('property', 'og:image')
+    }
+
+    upsertMeta('name', 'twitter:card', 'summary_large_image')
+    upsertMeta('name', 'twitter:title', fullTitle)
+    upsertMeta('name', 'twitter:description', description || defaultDescription)
+    if (ogImage) {
+      upsertMeta('name', 'twitter:image', ogImage)
+    } else {
+      removeMeta('name', 'twitter:image')
+    }
+
+    upsertMeta('name', 'robots', 'index, follow')
+    upsertMeta('name', 'language', 'Portuguese')
+    upsertMeta('name', 'revisit-after', '7 days')
+    upsertMeta('name', 'author', 'North Ensaios')
+  }, [canonical, defaultDescription, defaultKeywords, description, fullTitle, keywords, ogImage, ogType, siteUrl])
+
+  return null
 }
 
 export default SEO
