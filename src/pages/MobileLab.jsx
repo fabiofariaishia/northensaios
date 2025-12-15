@@ -5,6 +5,11 @@ import CertificationsBadges from '../components/lab/CertificationsBadges'
 import { FaTruck, FaClock, FaCheckCircle, FaFileAlt } from 'react-icons/fa'
 import Button from '../components/common/Button'
 import { Link } from 'react-router-dom'
+import vanSprinterImg from '../assets/images/lab-movel/branded-van.png'
+import truck1Img from '../assets/images/lab-movel/truck-1.jpg'
+import truck2Img from '../assets/images/lab-movel/truck-2.jpg'
+import truck3Img from '../assets/images/lab-movel/truck-3.jpg'
+import truck4Img from '../assets/images/lab-movel/truck-4.jpg'
 import './MobileLab.css'
 
 function MobileLab() {
@@ -45,6 +50,13 @@ function MobileLab() {
     'Mesma qualidade e certificação do laboratório fixo'
   ]
 
+  const galleryImages = [
+    { src: vanSprinterImg, alt: 'Laboratório Móvel North Ensaios - van plotada' },
+    { src: truck2Img, alt: 'Laboratório Móvel North Ensaios em operação - 2' },
+    { src: truck3Img, alt: 'Laboratório Móvel North Ensaios em operação - 3' },
+    { src: truck4Img, alt: 'Laboratório Móvel North Ensaios em operação - 4' }
+  ]
+
   return (
     <>
       <SEO
@@ -79,7 +91,7 @@ function MobileLab() {
           </div>
           <div className="lab-intro-image">
             <img
-              src="https://placehold.co/600x400/006B3F/FFFFFF?text=Laboratorio+Movel"
+              src={vanSprinterImg}
               alt="Laboratório Móvel North Ensaios"
               loading="lazy"
             />
@@ -144,34 +156,11 @@ function MobileLab() {
         background="light"
       >
         <div className="lab-gallery">
-          <div className="gallery-item">
-            <img
-              src="https://placehold.co/400x300/006B3F/FFFFFF?text=Lab+Movel+1"
-              alt="Laboratório Móvel 1"
-              loading="lazy"
-            />
-          </div>
-          <div className="gallery-item">
-            <img
-              src="https://placehold.co/400x300/1A1A1A/FFFFFF?text=Lab+Movel+2"
-              alt="Laboratório Móvel 2"
-              loading="lazy"
-            />
-          </div>
-          <div className="gallery-item">
-            <img
-              src="https://placehold.co/400x300/006B3F/FFFFFF?text=Lab+Movel+3"
-              alt="Laboratório Móvel 3"
-              loading="lazy"
-            />
-          </div>
-          <div className="gallery-item">
-            <img
-              src="https://placehold.co/400x300/1A1A1A/FFFFFF?text=Lab+Movel+4"
-              alt="Laboratório Móvel 4"
-              loading="lazy"
-            />
-          </div>
+          {galleryImages.map((image, index) => (
+            <div key={index} className="gallery-item">
+              <img src={image.src} alt={image.alt} loading="lazy" />
+            </div>
+          ))}
         </div>
       </Section>
 
