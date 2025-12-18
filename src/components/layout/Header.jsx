@@ -10,7 +10,13 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="header-logo">
-            <img src={logo} alt={`Logo ${COMPANY_NAME}`} />
+            <img
+              src={logo}
+              alt={`Logo ${COMPANY_NAME}`}
+              width="686"
+              height="232"
+              decoding="async"
+            />
             <span className="header-logo-text">{COMPANY_NAME}</span>
           </Link>
 

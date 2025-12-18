@@ -5,13 +5,25 @@ import CertificationsBadges from '../components/lab/CertificationsBadges'
 import { FaTruck, FaClock, FaCheckCircle, FaFileAlt } from 'react-icons/fa'
 import Button from '../components/common/Button'
 import { Link } from 'react-router-dom'
-import vanSprinterImg from '../assets/images/lab-movel/branded-van.png'
 import truck2Img from '../assets/images/lab-movel/truck-2.jpg'
 import truck3Img from '../assets/images/lab-movel/truck-3.jpg'
 import truck4Img from '../assets/images/lab-movel/truck-4.jpg'
 import './MobileLab.css'
 
 function MobileLab() {
+  const vanSprinterImg = {
+    src: '/images/carousel/branded-van-960.jpg',
+    srcSet: [
+      '/images/carousel/branded-van-640.jpg 640w',
+      '/images/carousel/branded-van-960.jpg 960w',
+      '/images/carousel/branded-van-1440.jpg 1440w',
+    ].join(', '),
+    sizes: '(max-width: 768px) 100vw, 600px',
+    width: 1792,
+    height: 576,
+    alt: 'Laboratório Móvel North Ensaios',
+  }
+
   const howItWorks = [
     {
       icon: <FaCheckCircle />,
@@ -90,9 +102,14 @@ function MobileLab() {
           </div>
           <div className="lab-intro-image">
             <img
-              src={vanSprinterImg}
-              alt="Laboratório Móvel North Ensaios"
+              src={vanSprinterImg.src}
+              srcSet={vanSprinterImg.srcSet}
+              sizes={vanSprinterImg.sizes}
+              width={vanSprinterImg.width}
+              height={vanSprinterImg.height}
+              alt={vanSprinterImg.alt}
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -157,7 +174,20 @@ function MobileLab() {
         <div className="lab-gallery">
           {galleryImages.map((image, index) => (
             <div key={index} className="gallery-item">
-              <img src={image.src} alt={image.alt} loading="lazy" />
+              {typeof image.src === 'string' ? (
+                <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
+              ) : (
+                <img
+                  src={image.src.src}
+                  srcSet={image.src.srcSet}
+                  sizes={image.src.sizes}
+                  width={image.src.width}
+                  height={image.src.height}
+                  alt={image.alt}
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
             </div>
           ))}
         </div>

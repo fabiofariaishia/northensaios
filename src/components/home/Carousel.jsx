@@ -27,12 +27,21 @@ function Carousel() {
         speed={800}
         className="home-carousel"
       >
-        {carouselSlides.map((slide) => (
+        {carouselSlides.map((slide, index) => (
           <SwiperSlide key={slide.id}>
-            <div
-              className="carousel-slide"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
+            <div className="carousel-slide">
+              <img
+                className="carousel-image"
+                src={slide.image.src}
+                srcSet={slide.image.srcSet}
+                sizes={slide.image.sizes}
+                width={slide.image.width}
+                height={slide.image.height}
+                alt={slide.image.alt}
+                decoding="async"
+                loading={index === 0 ? 'eager' : 'lazy'}
+                fetchPriority={index === 0 ? 'high' : 'low'}
+              />
               <div className="carousel-overlay">
                 <div className="container">
                   <div className="carousel-content">
